@@ -1,4 +1,4 @@
-# Walmart
+[bquxjob_63cb19ff_1910c22002a.csv](https://github.com/user-attachments/files/16450142/bquxjob_63cb19ff_1910c22002a.csv)# Walmart
 How Can A Business Be Successful
 
 ## INTRODUCTION
@@ -38,12 +38,28 @@ The tool used for the processing and cleaning stage will be Microsodft Excel. Si
  + Finally, i made sure the dates format were all formatted and consistent all through which was already that way.
  + The holiday_flag column shows 0 and 1, with '0' representing the week with no special holiday and '1' representing a special holiday 
    week
+
 ![image](https://github.com/user-attachments/assets/8bcabf07-fb01-4034-9c09-8928e352453b)
 
 Now the dataset is cleaned and ready for analysis.
 
 
 ### ANALYSIS
-  
+For this process, we use SQL to analyze the data. The first stage is to load the data into SQL and check the first 10 rows to be sure it was imported correctly.
+
+        SELECT *
+        FROM `my-sandbox-project-417117.Walmart.walmart_data` 
+        LIMIT 10
  
- 
+ ![image](https://github.com/user-attachments/assets/95f7bbac-438a-4083-8818-2663170ed83c)
+ This shows the correct column names and shows the rows are not organized. To be sure its the same data as in excel, i arranged the data and check the first 10 rows
+
+         SELECT *
+         FROM `my-sandbox-project-417117.Walmart.walmart_data`
+         ORDER BY Store ASC
+         LIMIT 10
+
+  ![image](https://github.com/user-attachments/assets/ae8287dd-7917-483f-a6f8-ad39b8e118bc)
+
+  Now that we are sure of the data, lets do a further analysis
+      
