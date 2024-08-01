@@ -92,3 +92,41 @@ Since we know the store with the highest total weekly sales, we will run this qu
 
  2. Now we look at what holiday is impacting weeekly sales
     
+        SELECT Date,
+               Weekly_Sales,
+               Holiday_Flag
+        FROM `my-sandbox-project-417117.Walmart.walmart_data`
+        WHERE Holiday_Flag=1
+        ORDER BY Weekly_Sales DESC
+
+    ![image](https://github.com/user-attachments/assets/1cae7e96-adba-4ec0-9c7b-dc85b0aaf758)
+
+*This query shows that the major holidays shown in the top 12 are mainly Thanksgiving and holidays like Christmas are not available. We can therefore not draw major conclusions using 
+ this query*
+
+3. Now we look at how unemployment is impacting weekly sales
+
+         SELECT Store,
+               Weekly_Sales,
+               Unemployment
+         FROM `my-sandbox-project-417117.Walmart.walmart_data`
+         ORDER BY Unemployment DESC
+         LIMIT 16
+   
+![image](https://github.com/user-attachments/assets/1f5bccff-61bd-4e96-8e9f-88214ddb7d5e)
+
+*This query shows that the highest unemployment rate was 14.313 and it happened in store 12, store 28 and store 38.*
+
+ Now we run another query to show the lowest rate of unemployment
+
+          SELECT Store,
+                 Weekly_Sales,
+                 Unemployment
+          FROM `my-sandbox-project-417117.Walmart.walmart_data`
+          ORDER BY Unemployment ASC
+          LIMIT 5
+
+![image](https://github.com/user-attachments/assets/1d793782-5fc8-4055-8d3c-46e305d33f3b)
+
+*This query shows that the lowest unemployment rate was in store 4 at the rate 3.879*
+
