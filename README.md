@@ -44,8 +44,8 @@ The tool used for the processing and cleaning stage will be Microsodft Excel. Si
 Now the dataset is cleaned and ready for analysis.
 
 
-### ANALYSIS
-For this process, we use SQL to analyze the data. The first stage is to load the data into SQL and check the first 10 rows to be sure it was imported correctly.
+### ANALYSIS AND SHARE
+For this process, we use SQL to analyze the data and Tableau for the visualization. The first stage is to load the data into SQL and check the first 10 rows to be sure it was imported correctly.
 
         SELECT *
         FROM `my-sandbox-project-417117.Walmart.walmart_data` 
@@ -63,5 +63,32 @@ For this process, we use SQL to analyze the data. The first stage is to load the
 
  ![image](https://github.com/user-attachments/assets/351e937b-34f9-4da6-ba7d-6c6a52875093)
 
-  Now that we are sure of the data, lets do a further analysis
+  Now that we are sure of the data, lets do a further analysis.
+
+ 1. Firstly, we look at the total revenue generated for each stores 
+           SELECT store,
+                  SUM(Weekly_Sales) AS total_weekly_sales
+           FROM `my-sandbox-project-417117.Walmart.walmart_data`
+           GROUP BY Store
+           ORDER BY total_weekly_sales DESC;
       
+![image](https://github.com/user-attachments/assets/ab5ce111-6240-4c91-a556-dd14a1cb3574)
+
+*This result shows that store 20 has the highest total number of weekly sales and following closely is store 4.*
+
+Since we know the store with the highest total weekly sales, we will run this query to get the store with the lowest wekly sales.
+
+          SELECT store,
+                 SUM(Weekly_Sales) AS total_weekly_sales
+          FROM `my-sandbox-project-417117.Walmart.walmart_data`
+          GROUP BY Store
+          ORDER BY total_weekly_sales ASC;
+
+ ![image](https://github.com/user-attachments/assets/b7b8aec2-08f0-4ccd-b7f1-7f0893d21fc2)
+ 
+ *This result shows that store 33 has the lowest total number of weekly sales and following closely is store 44.*
+
+![total_weekly_sales by store](https://github.com/user-attachments/assets/a18e3758-891a-401a-9875-2830ec9c182f)
+
+ 2. Now we
+    
