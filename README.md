@@ -1,4 +1,4 @@
-[bquxjob_63cb19ff_1910c22002a.csv](https://github.com/user-attachments/files/16450142/bquxjob_63cb19ff_1910c22002a.csv)# Walmart
+# Walmart
 How Can A Business Be Successful
 
 ## INTRODUCTION
@@ -52,6 +52,7 @@ For this process, we use SQL to analyze the data. The first stage is to load the
         LIMIT 10
  
  ![image](https://github.com/user-attachments/assets/95f7bbac-438a-4083-8818-2663170ed83c)
+
  This shows the correct column names and shows the rows are not organized. To be sure its the same data as in excel, i arranged the data and check the first 10 rows
 
          SELECT *
