@@ -38,8 +38,10 @@ The tool used for the processing and cleaning stage will be Microsodft Excel. Si
  + Finally, i made sure the dates format were all formatted and consistent all through which was already that way.
  + The holiday_flag column shows 0 and 1, with '0' representing the week with no special holiday and '1' representing a special holiday 
    week
+![image](https://github.com/user-attachments/assets/8bcabf07-fb01-4034-9c09-8928e352453b)
 
 Now the dataset is cleaned and ready for analysis.
+
 
 ### ANALYSIS
   
