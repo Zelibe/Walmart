@@ -57,10 +57,11 @@ For this process, we use SQL to analyze the data. The first stage is to load the
 
          SELECT *
          FROM `my-sandbox-project-417117.Walmart.walmart_data`
-         ORDER BY Store ASC
+         ORDER BY Store
+                  Date ASC
          LIMIT 10
 
-  ![image](https://github.com/user-attachments/assets/ae8287dd-7917-483f-a6f8-ad39b8e118bc)
+ ![image](https://github.com/user-attachments/assets/351e937b-34f9-4da6-ba7d-6c6a52875093)
 
   Now that we are sure of the data, lets do a further analysis
       
