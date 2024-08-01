@@ -90,5 +90,5 @@ Since we know the store with the highest total weekly sales, we will run this qu
 
 ![total_weekly_sales by store](https://github.com/user-attachments/assets/a18e3758-891a-401a-9875-2830ec9c182f)
 
- 2. Now we
+ 2. Now we look at what holiday is impacting weeekly sales
     
