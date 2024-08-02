@@ -130,3 +130,7 @@ Since we know the store with the highest total weekly sales, we will run this qu
 
 *This query shows that the lowest unemployment rate was in store 4 at the rate 3.879*
 
+![Weekly_Sales, Unemployment by Store](https://github.com/user-attachments/assets/7831fe59-f64a-4142-b4a1-a83bdd3f701f)
+
+*This visual shows that there is no correlation between unemployment and weekly sales.*
+
