@@ -90,7 +90,7 @@ Since we know the store with the highest total weekly sales, we will run this qu
 
 ![total_weekly_sales by store](https://github.com/user-attachments/assets/a18e3758-891a-401a-9875-2830ec9c182f)
 
-2. Now we  query what year had the highest weekly sales
+2. Now we  query the year with the highest and lowest sales 
 
          SELECT 
             SUM(weekly_sales) AS total_sales,
@@ -108,8 +108,7 @@ Since we know the store with the highest total weekly sales, we will run this qu
 
 *This shows that the year 2011 recorded the highest total sales while 2012 recorded the least sales*
 
- 
-4. Now we look at what holiday is impacting weeekly sales
+ 4. Now we look at what holiday is impacting weeekly sales
     
         SELECT Date,
                Weekly_Sales,
