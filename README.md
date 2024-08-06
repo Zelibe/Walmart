@@ -45,7 +45,7 @@ Now the dataset is cleaned and ready for analysis.
 
 
 ### ANALYSIS AND SHARE
-For this process, we use SQL to analyze the data and Tableau for the visualization. The first stage is to load the data into SQL and check the first 10 rows to be sure it was imported correctly.
+For this process, we use SQL to analyze the data and Tableau and SQL for the visualization. The first stage is to load the data into SQL and check the first 10 rows to be sure it was imported correctly.
 
         SELECT *
         FROM `my-sandbox-project-417117.Walmart.walmart_data` 
@@ -90,7 +90,26 @@ Since we know the store with the highest total weekly sales, we will run this qu
 
 ![total_weekly_sales by store](https://github.com/user-attachments/assets/a18e3758-891a-401a-9875-2830ec9c182f)
 
- 2. Now we look at what holiday is impacting weeekly sales
+2. Now we  query what year had the highest weekly sales
+
+         SELECT 
+            SUM(weekly_sales) AS total_sales,
+            EXTRACT(year FROM Date) AS sales_year
+        FROM 
+           `my-sandbox-project-417117.Walmart.walmart_data`
+        GROUP BY
+            sales_year
+        ORDER BY
+            total_sales DESC; 
+
+![image](https://github.com/user-attachments/assets/b1f1b1f7-f38d-446d-a243-576884e8155c)
+
+![Sheet 1 (6)](https://github.com/user-attachments/assets/b9d983ab-6eba-4abf-b055-f666d0ff93bb)
+
+*This shows that the year 2011 recorded the highest total sales while 2012 recorded the least sales*
+
+ 
+4. Now we look at what holiday is impacting weeekly sales
     
         SELECT Date,
                Weekly_Sales,
