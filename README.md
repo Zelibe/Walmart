@@ -108,7 +108,7 @@ Since we know the store with the highest total weekly sales, we will run this qu
 
 *This shows that the year 2011 recorded the highest total sales while 2012 recorded the least sales*
 
- 4. Now we look at what holiday is impacting weeekly sales
+ 3. Now we look at what holiday is impacting weeekly sales
     
         SELECT Date,
                Weekly_Sales,
@@ -122,7 +122,7 @@ Since we know the store with the highest total weekly sales, we will run this qu
 *This query shows that the major holidays shown in the top 12 are mainly Thanksgiving and holidays like Christmas are not available. We can therefore not draw major conclusions using 
  this query*
 
-3. Now we look at how unemployment is impacting weekly sales
+4. Now we look at how unemployment is impacting weekly sales
 
          SELECT Store,
                Weekly_Sales,
