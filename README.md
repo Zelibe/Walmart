@@ -20,7 +20,7 @@ The purpose of this project is to conduct an in-depth analysis of sales data to 
 ### PREPARE
 #### Background
 The data is public dataset available through kaggle https://www.kaggle.com/datasets/mikhail1681/walmart-sales/data. It contains data 
- from 45 different walmart stores and 6436 rows. Since the data is a first party data it is ROCCC, we have access to their weekly Sales 
+ from 45 different walmart stores from year 2010 to year 2012 and 6436 rows. Since the data is a first party data it is ROCCC, we have access to their weekly Sales 
  along with  the Temperature, CPI, Fuel Price, and Unemployment rates at time intervals  throughout the year. We want to analyze all 
  these different values to see if there were possible correlations between two or more values at a period in our dataset. 
 
@@ -110,18 +110,44 @@ Since we know the store with the highest total weekly sales, we will run this qu
 
  3. Now we look at what holiday is impacting weeekly sales
     
-        SELECT Date,
-               Weekly_Sales,
-               Holiday_Flag
-        FROM `my-sandbox-project-417117.Walmart.walmart_data`
-        WHERE Holiday_Flag=1
-        ORDER BY Weekly_Sales DESC
+          SELECT 
+                Date,
+                EXTRACT(year FROM Date) AS year,
+                SUM(Weekly_Sales) AS total_sales,
+                Holiday_Flag
+          FROM 
+               `my-sandbox-project-417117.Walmart.walmart_data`
+          WHERE 
+                Holiday_Flag = 1
+          GROUP BY
+                Date, Holiday_Flag
+          ORDER BY 
+                total_sales DESC
 
-    ![image](https://github.com/user-attachments/assets/1cae7e96-adba-4ec0-9c7b-dc85b0aaf758)
+    ![image](https://github.com/user-attachments/assets/12169665-6d5b-4316-a3cb-7064d4037839)
 
-*This query shows that the major holidays shown in the top 12 are mainly Thanksgiving and holidays like Christmas are not available. We can therefore not draw major conclusions using 
- this query*
+*This query shows that the major top 3 holidays with high total sales Thanksgiving(2011-11-25 and 2010-11-26) and  Super Bowl(2012-02-10), with 2011 having the highest total sales 
+ year for Thanksgiving. Holidays like Christmas are not available  in the dataset.*
 
+*However, After further research the date 2011-11-25 and 2010-11-26 happen to be Black Friday in the United States. Black Fridays are days retailers including Walmart, often offers 
+ discounts and promotions attracting  a large number of customers, making this day one of the biggest shopping days.*
+
+4. Relationship between temperature and sales
+
+            SELECT 
+                 Weekly_Sales,
+                 Temperature,
+            FROM 
+                `my-sandbox-project-417117.Walmart.walmart_data`
+            ORDER BY 
+                 Temperature DESC
+
+   ![Weekly_Sales by Temperature (1)](https://github.com/user-attachments/assets/5f04fbb4-8441-4e5c-955e-25beec509cbb)
+
+5. Correlatiion between fuel price and sales.
+           
+
+           
 4. Now we look at how unemployment is impacting weekly sales
 
          SELECT Store,
