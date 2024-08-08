@@ -144,11 +144,38 @@ Since we know the store with the highest total weekly sales, we will run this qu
 
    ![Weekly_Sales by Temperature (1)](https://github.com/user-attachments/assets/5f04fbb4-8441-4e5c-955e-25beec509cbb)
 
-5. Correlatiion between fuel price and sales.
-           
+*Here, this shows that as temperature increases, weekly sales may slightly decrease and vice versa. Although, this result does not give a clear correlation or relationshiop between temperature and weekly sales.*
 
-           
-4. Now we look at how unemployment is impacting weekly sales
+5. Correlatiion between fuel price and sales.
+
+               SELECT 
+                     Weekly_Sales,
+                     Fuel_Price
+               FROM 
+                    `my-sandbox-project-417117.Walmart.walmart_data`
+               ORDER BY 
+                     Fuel_Price DESC;
+
+   ![Sheet 1 (7)](https://github.com/user-attachments/assets/8948cc3f-c607-402f-a1d7-7f2270554046)
+
+*This shows that fuel price have little or no impact on Walmart's weekly sales* 
+
+6. Correlation between CPI and Sales.
+
+             SELECT 
+                  Weekly_Sales,
+                  CPI
+             FROM 
+                 `my-sandbox-project-417117.Walmart.walmart_data`
+             ORDER BY 
+                  CPI DESC;
+  
+   ![Sheet 2 (2)](https://github.com/user-attachments/assets/7f275f6b-dd61-43e0-9e10-07412fbb767d)
+
+*As the CPI increases which shows a high inflation of consumer prices, the weekly sales may slightly reduce, and vice versa. This result shows little or no relationship between CPI 
+ and weekly sales*
+ 
+ 7. Now we look at how unemployment is impacting weekly sales
 
          SELECT Store,
                Weekly_Sales,
@@ -178,3 +205,4 @@ Since we know the store with the highest total weekly sales, we will run this qu
 
 *This visual shows that there is no correlation between unemployment and weekly sales.*
 
+### ACT
