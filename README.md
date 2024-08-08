@@ -1,5 +1,5 @@
 # Walmart
-How Can A Business Be Successful
+How Can A Business Be  Well-Informed
 
 ## INTRODUCTION
 In this project, I will take on the role of a junior data analyst who was given a dataset assigned by the supervisor that needs to be 
