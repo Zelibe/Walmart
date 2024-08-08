@@ -107,8 +107,6 @@ Since we know the store with the highest total weekly sales, we will run this qu
         ORDER BY
             total_sales DESC; 
 
-![image](https://github.com/user-attachments/assets/b1f1b1f7-f38d-446d-a243-576884e8155c)
-
 ![Sheet 1 (6)](https://github.com/user-attachments/assets/b9d983ab-6eba-4abf-b055-f666d0ff93bb)
 
 *This shows that the year 2011 recorded the highest total sales while 2012 recorded the least sales*
@@ -211,3 +209,8 @@ Since we know the store with the highest total weekly sales, we will run this qu
 *This visual shows that there is no correlation between unemployment and weekly sales.*
 
 ### ACT
+
+   + Since the data shows that the week with the highest number of sales are weeks leading to christmas, Walmart should increase the number of inventory to avoid shortages of products 
+  during this period.
+   + Additionally, we can suggest to hire more more workers this period to account for influx of customers during this period.
+   +   There will not be any recommendation for temperature and fuel price as  we there was no positive or negative relationship with the sales price.                                                                               
