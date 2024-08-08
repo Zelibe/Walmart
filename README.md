@@ -56,9 +56,10 @@ For this process, we use SQL to analyze the data and Tableau and SQL for the vis
  This shows the correct column names and shows the rows are not organized. To be sure its the same data as in excel, i arranged the data and check the first 10 rows
 
          SELECT *
-         FROM `my-sandbox-project-417117.Walmart.walmart_data`
-         ORDER BY Store
-                  Date ASC
+         FROM 
+              `my-sandbox-project-417117.Walmart.walmart_data`
+         ORDER BY Store,
+                  Date ASC;
          LIMIT 10
 
  ![image](https://github.com/user-attachments/assets/351e937b-34f9-4da6-ba7d-6c6a52875093)
@@ -66,11 +67,15 @@ For this process, we use SQL to analyze the data and Tableau and SQL for the vis
   Now that we are sure of the data, lets do a further analysis.
 
  1. Firstly, we look at the total revenue generated for each stores 
+
            SELECT store,
                   SUM(Weekly_Sales) AS total_weekly_sales
-           FROM `my-sandbox-project-417117.Walmart.walmart_data`
-           GROUP BY Store
-           ORDER BY total_weekly_sales DESC;
+           FROM
+                 `my-sandbox-project-417117.Walmart.walmart_data`
+           GROUP BY
+                  Store
+           ORDER BY
+                  total_weekly_sales DESC;
       
 ![image](https://github.com/user-attachments/assets/ab5ce111-6240-4c91-a556-dd14a1cb3574)
 
